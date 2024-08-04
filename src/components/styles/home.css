@@ -8,7 +8,7 @@
 
 .section_hero {
   padding-top: 3.6rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/images/hero-celu.jpg");
   object-fit: cover;
   background-size: 100% 100%;
