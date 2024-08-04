@@ -1,0 +1,18 @@
+:root {
+  --bg-color:  #000;
+  --primary-color: #E3B505;
+  --second-color: #1BE7FF;
+  --terciary-color: #0353A4;
+  --lavander-color: #DDDBF1;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: #fff;
+}

@@ -1,0 +1,61 @@
+:root {
+  --bg-color: #080f0f;
+  --primary-color: #e3b505;
+  --second-color: #1be7ff;
+  --terciary-color: #0353a4;
+  --lavander-color: #dddbf1;
+}
+
+.section_comoEntrenar {
+  padding: 1rem;
+}
+
+.section_conceptos_title{
+    margin-top: 3rem;
+    font-size: 1.3rem;
+}
+
+.conceptos {
+  list-style: none;
+}
+
+.concepto_link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 2px solid #1be7ff;
+  width: fit-content;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 12px;
+}
+
+.concepto_link:hover {
+  scale: 1;
+  color: #fff;
+  background-color: #114f5a;
+}
+
+.article_concepto {
+  margin-top: 2rem;
+  color: #dddbf1;
+  font-size: 0.8rem;
+}
+
+.article_title {
+  color: #2290ff;
+  text-decoration: underline;
+  margin-bottom: .3rem;
+  font-size: 1.5rem;
+}
+
+.article_ul li {
+  margin: 0.8rem 0rem 0.5rem 1rem;
+}
+
+#comoCrearMisRutinas h4 {
+  color: #16a403;
+  font-size: 1.5rem;
+  margin: 2.5rem 0rem 0.25rem 0rem;
+}
