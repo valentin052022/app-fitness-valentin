@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles/home.css"
 import { Link } from "react-router-dom";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Footer } from "./Footer";
 
 
 export const Home = () => {
@@ -98,6 +99,7 @@ export const Home = () => {
           </div>
         </article>
       </section>
+      <Footer/>
     </>
   );
 };

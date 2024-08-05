@@ -8,14 +8,18 @@ import Proptypes from "prop-types";
 const ShowResult = ({ sexo, edad, altura, peso, actividad, objetivo }) => {
   const [tmb, setTmb] = useState(0);
   const [result, setResult] = useState(0);
-  const [macros, setMacros] = useState({proteina: 0, grasas: 0, carbohidratos: 0});
+  const [macros, setMacros] = useState({
+    proteina: 0,
+    grasas: 0,
+    carbohidratos: 0,
+  });
 
   useEffect(() => {
     let TMB = 0;
     if (sexo === "hombre") {
-      TMB = 88.36 + (13.39 * peso) + (4.79 * altura) - (5.67 * edad);
+      TMB = 88.36 + 13.39 * peso + 4.79 * altura - 5.67 * edad;
     } else if (sexo === "mujer") {
-      TMB = 447.59 + (9.24 * peso) + (3.09 * altura) - (4.33 * edad);
+      TMB = 447.59 + 9.24 * peso + 3.09 * altura - 4.33 * edad;
     }
 
     let actividadFactor = 1;
@@ -39,31 +43,31 @@ const ShowResult = ({ sexo, edad, altura, peso, actividad, objetivo }) => {
     switch (objetivo) {
       case "mantener":
         caloriasFinales = tmb * actividadFactor;
-        macros.proteina = caloriasFinales * 0.25 / 4;
-        macros.grasas = caloriasFinales * 0.25 / 9;
-        macros.carbohidratos = caloriasFinales * 0.50 / 4;
-        setMacros(macros)
+        macros.proteina = (caloriasFinales * 0.25) / 4;
+        macros.grasas = (caloriasFinales * 0.25) / 9;
+        macros.carbohidratos = (caloriasFinales * 0.5) / 4;
+        setMacros(macros);
         break;
       case "ganar":
-        caloriasFinales = (tmb * actividadFactor) * 1.13;
-        macros.proteina = caloriasFinales * 0.35 / 4;
-        macros.grasas = caloriasFinales * 0.20 / 4;
-        macros.carbohidratos = caloriasFinales * 0.45 / 4;
-        setMacros(macros)
-        break
-      case "perder": 
-        caloriasFinales = (tmb *  actividadFactor) * 0.90;
-        macros.proteina = caloriasFinales * 0.25 / 4;
-        macros.grasas = caloriasFinales * 0.20 / 9;
-        macros.carbohidratos = caloriasFinales * 0.55 / 4;
-        setMacros(macros)
-        break
+        caloriasFinales = tmb * actividadFactor * 1.13;
+        macros.proteina = (caloriasFinales * 0.35) / 4;
+        macros.grasas = (caloriasFinales * 0.2) / 4;
+        macros.carbohidratos = (caloriasFinales * 0.45) / 4;
+        setMacros(macros);
+        break;
+      case "perder":
+        caloriasFinales = tmb * actividadFactor * 0.9;
+        macros.proteina = (caloriasFinales * 0.25) / 4;
+        macros.grasas = (caloriasFinales * 0.2) / 9;
+        macros.carbohidratos = (caloriasFinales * 0.55) / 4;
+        setMacros(macros);
+        break;
       default:
         caloriasFinales = tmb * actividadFactor;
-        setMacros(macros)
+        setMacros(macros);
         break;
     }
-    setResult(caloriasFinales)    
+    setResult(caloriasFinales);
   }, [sexo, edad, altura, peso, actividad, objetivo, tmb, macros]);
 
   return (
@@ -72,17 +76,19 @@ const ShowResult = ({ sexo, edad, altura, peso, actividad, objetivo }) => {
       <section className="cont_TMB">
         <div className="metabolismo">
           <b>Tasa Metabolismo Basal - </b>
-          <b>{tmb.toFixed(0)}</b>
+          <b>{tmb.toFixed(0)}Kcal</b>
         </div>
         <div className="calorias_objetivo">
           <b>Calorias Objetivas - {objetivo} - </b>
-          <b>{result.toFixed(0)}</b>
+          <b>{result.toFixed(0)}Kcal</b>
         </div>
       </section>
       <section className="cont_macros">
         <div className="macro">🧈 Grasas: {macros.grasas.toFixed(0)}g</div>
         <div className="macro">🍗 Proteinas: {macros.proteina.toFixed(0)}g</div>
-        <div className="macro">🍞 Carbohidratos: {macros.carbohidratos.toFixed(0)}g</div>
+        <div className="macro">
+          🍞 Carbohidratos: {macros.carbohidratos.toFixed(0)}g
+        </div>
       </section>
     </main>
   );
@@ -133,9 +139,9 @@ export const CalculadoraCalorias = () => {
     console.log(clickSelect, actividadCard, edad, altura, peso, objetivo);
   };
 
-  const verResultado = () =>{
-    setVer(true)
-  }
+  const verResultado = () => {
+    setVer(true);
+  };
 
   return (
     <main className="main_calculadora">
@@ -166,6 +172,7 @@ export const CalculadoraCalorias = () => {
               id="edad"
               max={99}
               onChange={handleEdad}
+              required
             />
           </div>
           <div className="cont_input altura">
@@ -176,6 +183,7 @@ export const CalculadoraCalorias = () => {
               id="altura"
               maxLength={3}
               onChange={handleAltura}
+              required
             />
           </div>
           <div className="cont_input peso">
@@ -183,6 +191,7 @@ export const CalculadoraCalorias = () => {
             <input
               type="float"
               name="peso"
+              required
               id="peso"
               maxLength={5}
               onChange={handlePeso}
@@ -251,18 +260,23 @@ export const CalculadoraCalorias = () => {
             <h3>PERDER PESO</h3>
           </div>
         </section>
-        <button type="submit" onClick={verResultado}>CALCULAR</button>
+        <button type="submit" onClick={verResultado}>
+          CALCULAR
+        </button>
       </form>
 
-      {ver ? <ShowResult
-        actividad={actividadCard}
-        altura={parseInt(altura)}
-        peso={parseFloat(peso)}
-        edad={parseInt(edad)}
-        objetivo={objetivo}
-        sexo={clickSelect}
-      /> : <></>}
-      
+      {ver ? (
+        <ShowResult
+          actividad={actividadCard}
+          altura={parseInt(altura)}
+          peso={parseFloat(peso)}
+          edad={parseInt(edad)}
+          objetivo={objetivo}
+          sexo={clickSelect}
+        />
+      ) : (
+        <></>
+      )}
     </main>
   );
 };

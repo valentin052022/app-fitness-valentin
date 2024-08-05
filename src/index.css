@@ -16,3 +16,47 @@ body{
   background-color: var(--bg-color);
   color: #fff;
 }
+
+
+.cont_terminos{
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.title_terminos{
+  color: var(--second-color);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.cont_list_terminos{
+  margin-left: .5rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+/* PrivacyPolicy.css */
+.privacy-policy {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.privacy-policy h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.privacy-policy p {
+  margin-bottom: 1rem;
+}
+.privacy-policy, .title_privacy{
+  color: #fff !important;
+}

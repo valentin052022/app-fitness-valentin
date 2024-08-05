@@ -102,8 +102,10 @@
     background-color: #000;
     transition: background-color 300ms;
   }
+
   .link_ul_header:hover {
     background-color: var(--terciary-color);
     scale: .98;
   }
+  
 }
