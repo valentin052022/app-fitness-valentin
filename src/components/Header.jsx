@@ -44,9 +44,9 @@ export function Header() {
       </div>
       {showNav ? <NavBar visible="show" /> : <NavBar visible="hide" />}
       {showNav ? (
-        <FontAwesomeIcon onClick={handleButton} icon={faX} />
+        <FontAwesomeIcon onClick={handleButton} icon={faX} className="icon_header" />
       ) : (
-        <FontAwesomeIcon onClick={handleButton} icon={faBars} />
+        <FontAwesomeIcon onClick={handleButton} icon={faBars} className="icon_header"/>
       )}
     </header>
   );

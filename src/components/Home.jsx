@@ -65,6 +65,7 @@ export const Home = () => {
                 <div className="tags">Facil</div>
                 <div className="tags">Sin equipamiento</div>
                 <div className="tags">Peso corporal</div>
+                <div className="tags">Rapido</div>
               </div>
               <Link to={"/rutinas-cuerpo-entero"} className="link">Ver Rutinas Cuerpo Entero</Link>
             </div>

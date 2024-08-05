@@ -23,6 +23,7 @@
 .logo {
   color: #000;
 }
+
 .nav {
   position: absolute;
   height: fit-content;
@@ -44,7 +45,7 @@
 
 .link_ul_header {
   display: block;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   background-color: #1d1c1c;
@@ -58,4 +59,51 @@
 
 .hide {
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hide {
+    display: inherit;
+  }
+
+  .icon_header {
+    display: none;
+  }
+
+  .hader {
+    height: fit-content;
+    padding: .5rem 1rem;
+  }
+
+  .nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav_ul {
+    display: flex;
+    align-items: center !important;
+    justify-content: end;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .link_ul_header {
+    display: block;
+    margin: 0;
+    padding: .35rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #000;
+    transition: background-color 300ms;
+  }
+  .link_ul_header:hover {
+    background-color: var(--terciary-color);
+    scale: .98;
+  }
 }
