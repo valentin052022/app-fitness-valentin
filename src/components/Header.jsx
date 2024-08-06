@@ -40,7 +40,10 @@ export function Header() {
   return (
     <header className="hader">
       <div className="logo">
-        <b>GymMotivacion22</b>
+        <div className="cont_logo">
+          <img src="images/LogoGym.png" alt="logo app"></img>
+        </div>
+        <b>GYMM22</b>
       </div>
       {showNav ? <NavBar visible="show" /> : <NavBar visible="hide" />}
       {showNav ? (

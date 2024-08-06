@@ -9,56 +9,91 @@ export const ComoEntrenar = () => {
       </h1>
       <article>
         <ol>
-          <h3 className="section_conceptos_title">Coneceptos que aprenderas:</h3>
+          <h3 className="section_conceptos_title">
+            Coneceptos que aprenderas:
+          </h3>
           <li className="conceptos">
-            <a className="concepto_link" href="#volumen">Volumen de Entrenamiento</a>
+            <a className="concepto_link" href="#volumen">
+              Volumen de Entrenamiento
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#frecuencia">Frecuencia de Entrenamiento</a>
+            <a className="concepto_link" href="#frecuencia">
+              Frecuencia de Entrenamiento
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#intensidad">Intensidad</a>
+            <a className="concepto_link" href="#intensidad">
+              Intensidad
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#progresion">Progresion</a>
+            <a className="concepto_link" href="#progresion">
+              Progresion
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#rir">RIR: Repeticiones en reserva</a>
+            <a className="concepto_link" href="#rir">
+              RIR: Repeticiones en reserva
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#tiposDeEjercicios">Tipos de Ejercicios</a>
+            <a className="concepto_link" href="#tiposDeEjercicios">
+              Tipos de Ejercicios
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#descanso">Descanso y recuperacion</a>
+            <a className="concepto_link" href="#descanso">
+              Descanso y recuperacion
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#nutricion">Nutricion</a>
+            <a className="concepto_link" href="#nutricion">
+              Nutricion
+            </a>
           </li>
           <li className="conceptos">
-            <a className="concepto_link" href="#comoCrearMisRutinas">Como hacer mis propias rutinas.</a>
+            <a className="concepto_link" href="#comoCrearMisRutinas">
+              Como hacer mis propias rutinas.
+            </a>
           </li>
         </ol>
       </article>
+
+      <article className="article_concepto">
+      <h3  className="article_title">Guia Completa para que organices tus ruitnas</h3>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/KXnOryN4ENc?si=iiqEq5-uhW8RacoN"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <p>Propiedad de: Andres Vazquez Personal Trainer</p>
+      </article>
       <article className="article_concepto" id="volumen">
+      
         <h3 className="article_title">Volumen de entrenamiento:</h3>
         <p>
           Se refiere a la cantidad total de trabajo que realizas en tus sesiones
           de ejercicio. Se calcula multiplicando el número de series por el
           número de repeticiones por la carga (peso) utilizada. Es un factor
-          crucial para estimular el crecimiento muscular y la fuerza.</p>
-          <ul className="article_ul">
-            <li>
-              <b>Ejemplo:</b> Si haces 3 series de 12 repeticiones de press de
-              banca con 60 kg, el volumen de entrenamiento sería 3 x 12 x 60 =
-              2160 kg.
-            </li>
-            <li>
-              <b> Recomendación:</b> Para ganar masa muscular, un volumen de
-              entrenamiento semanal de 10-20 series por grupo muscular es
-              generalmente efectivo. Esto puede variar según la experiencia de
-              cada persona y su capacidad de recuperación.
-            </li>
-          </ul>
+          crucial para estimular el crecimiento muscular y la fuerza.
+        </p>
+        <ul className="article_ul">
+          <li>
+            <b>Ejemplo:</b> Si haces 3 series de 12 repeticiones de press de
+            banca con 60 kg, el volumen de entrenamiento sería 3 x 12 x 60 =
+            2160 kg.
+          </li>
+          <li>
+            <b> Recomendación:</b> Para ganar masa muscular, un volumen de
+            entrenamiento semanal de 10-20 series por grupo muscular es
+            generalmente efectivo. Esto puede variar según la experiencia de
+            cada persona y su capacidad de recuperación.
+          </li>
+        </ul>
       </article>
 
       <article className="article_concepto" id="frecuencia">
@@ -209,6 +244,8 @@ export const ComoEntrenar = () => {
       </article>
       <article className="article_concepto" id="comoCrearMisRutinas">
         <h3 className="article_title">Como crear mis rutinas</h3>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/JwN4zvdZRBQ?si=0gRNtgdY9JBKIae7" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        <p>Propiedad y creditos a: Andrez Vazquez Personal Trainer</p>
         <p>
           Lo primero que tenes que tener en cuenta es tu objetivo(ganar musculo,
           perder grasa, estar atletico). Una vez hecho esto podras ajustar lo

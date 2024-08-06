@@ -1,6 +1,8 @@
 .main_calculadora {
   padding: 1rem;
   box-sizing: border-box;
+  max-width: 800px;
+  margin: auto;
 }
 
 .info_basica {
